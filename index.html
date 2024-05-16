@@ -7,14 +7,20 @@
     <title>Test task</title>
   </head>
   <body>
-    <div class="login">
-      <p>Логин</p>
-      <input id="loginInput" required type="text" name="name" />
-    </div>
-    <div class="password">
-      <p>Пароль</p>
-      <input id="passwordInput" required type="password" name="name" />
-    </div>
-    <button type="submit" id="button">Отправить</button>
+    <form>
+      <label for="emailField">Enter your email:</label>
+      <input type="email" name="emailField" id="emailField" required />
+      <label for="emailField">Enter your password:</label>
+      <input
+        type="password"
+        name="passwordField"
+        id="passwordField"
+        pattern="^[a-zA-Z0-9]{6,20}$"
+        placeholder="password"
+        title="Password must be numbers or letters and 6-20 characters in length"
+        required
+      />
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>
